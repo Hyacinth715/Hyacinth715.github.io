@@ -175,6 +175,14 @@
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
   </nav>
 </div>
   <div class="links-of-author site-overview-item animated">
@@ -241,6 +249,26 @@
 
       <time title="创建时间：2021-03-12 19:44:41" itemprop="dateCreated datePublished" datetime="2021-03-12T19:44:41+08:00">2021-03-12</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-03-14 15:29:48" itemprop="dateModified" datetime="2021-03-14T15:29:48+08:00">2021-03-14</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+        </span>
+    </span>
 
   
 </div>
@@ -252,7 +280,132 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <h2 id="1-CSS简介"><a href="#1-CSS简介" class="headerlink" title="1.CSS简介"></a>1.CSS简介</h2><p>CSS 指的是<strong>层叠样式表</strong> (Cascading Style Sheets)<br>CSS 描述了如何在屏幕、纸张或其他媒体上显示 HTML 元素</p>
+<ul>
+<li>CSS 语法<br>CSS 规则集（rule-set）由选择器和声明块组成：<br><img src="https://www.w3school.com.cn/i/css/selector.gif" alt="语法"></li>
+</ul>
+<br/>
+
+<ul>
+<li><p>三种使用 CSS 的方法</p>
+<pre><code> - 外部 CSS  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在 head 部分的 link 元素内包含对外部样式表文件的引用
+ 可以使用到浏览器的缓存机制，从而加载浏览器的加载速度。
+ - 内部 CSS  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;head 部分的 style 元素中进行定义
+ - 行内 CSS  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在相关元素的 style 属性中定义
+</code></pre>
+<h4 id="优先级："><a href="#优先级：" class="headerlink" title="优先级："></a>优先级：</h4><p>  页面中的所有样式将按照以下规则“层叠”为新的“虚拟”样式表，其中第一优先级最高：</p>
+<ol>
+<li>行内样式（在 HTML 元素中）</li>
+<li>外部和内部样式表（在 head 部分）</li>
+<li>浏览器默认样式<br/></li>
+</ol>
+</li>
+<li><p>样式的继承<br>样式会应用到后代元素中<br>注意：并不是所有样式都会被继承 比如背景、布局相关的</p>
+</li>
+<li><p>CSS 注释<br>  位于 <code>&lt;style&gt; </code>元素内的 CSS 注释，以 /* 开始，以 */ 结束</p>
+</li>
+</ul>
+<p>##2.CSS选择器<br>我们可以将 CSS 选择器分为五类：</p>
+<ul>
+<li>简单选择器（根据名称、id、类来选取元素）</li>
+<li>组合器选择器（根据它们之间的特定关系来选取元素）</li>
+<li>伪类选择器（根据特定状态选取元素）</li>
+<li>伪元素选择器（选取元素的一部分并设置其样式）</li>
+<li>属性选择器（根据属性或属性值来选取元素）</li>
+</ul>
+<p>###2.1 简单选择器</p>
+<ul>
+<li><p>元素选择器<br>元素选择器根据元素名称来选择 HTML 元素。</p>
+</li>
+<li><p>id 选择器<br>id 选择器使用 HTML 元素的 id 属性来选择特定元素。<br>元素的 id 在页面中是<strong>唯一</strong>的，要选择具有特定 id 的元素，请写一个井号（＃），后跟该元素的 id。</p>
+</li>
+<li><p>类选择器<br>类选择器选择有特定 class 属性的 HTML 元素。<br>如需选择拥有特定class的元素，请写一个句点（.）字符，后面跟类名。</p>
+</li>
+<li><p>通用选择器<br>通用选择器（*）选择页面上的所有的 HTML 元素。</p>
+</li>
+<li><p>选择器分组 并集选择器<br>分组选择器选取所有具有相同样式定义的 HTML 元素。使用 逗号（,）</p>
+</li>
+<li><p>交集选择器<br>用元素选择器开头  p.red</p>
+</li>
+</ul>
+<p>###2.2 组合选择器</p>
+<ul>
+<li><p>后代选择器 (空格)<br>后代选择器匹配属于指定元素后代的所有元素。</p>
+</li>
+<li><p>子元素选择器 (&gt;)<br>子选择器匹配属于指定元素子元素的所有元素。</p>
+</li>
+<li><p>相邻兄弟选择器 (+)<br>相邻兄弟选择器匹配所有作为指定元素的相邻同级的元素。<br>兄弟（同级）元素必须具有相同的父元素，“相邻”的意思是“紧随其后”。</p>
+</li>
+<li><p>通用兄弟选择器 (~)<br>通用兄弟选择器匹配属于指定元素的同级元素的所有元素。</p>
+</li>
+</ul>
+<p>###2.3 伪类选择器<br>伪类用于定义元素的特殊状态。</p>
+<ul>
+<li>锚伪类 链接能够以不同的方式显示：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;* 未访问的链接 *&#x2F;</span><br><span class="line">a:link &#123;</span><br><span class="line">  color: #FF0000;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;* </span><br><span class="line">已访问的链接 </span><br><span class="line">由于隐私的原因 这个伪类只能修改颜色</span><br><span class="line">*&#x2F;</span><br><span class="line">a:visited &#123;</span><br><span class="line">  color: #00FF00;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;* 鼠标悬停链接 *&#x2F;</span><br><span class="line">a:hover &#123;</span><br><span class="line">  color: #FF00FF;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;* 已选择的链接 *&#x2F;</span><br><span class="line">a:active &#123;</span><br><span class="line">  color: #0000FF;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>伪类可以与 CSS 类结合使用</p>
+<ul>
+<li>CSS - :first-child 伪类<br>:first-child 伪类与指定的元素匹配：该元素是另一个元素的第一个子元素。</li>
+<li>:last-child 最后一个</li>
+<li>:nth-child() 第n个子元素<br>  特殊值：n 第n个 n:0到正无穷<br>  2n even 偶数位<br>  2n+1 odd 奇数位</li>
+</ul>
+<p>根据所有子元素进行排序</p>
+<ul>
+<li><p>:first-of-type</p>
+</li>
+<li><p>:last-of-type</p>
+</li>
+<li><p>:nth-of-type()<br>在同类元素中进行排序</p>
+</li>
+<li><p>:not() 否定伪类<br>除了</p>
+</li>
+</ul>
+<p>###2.4 伪元素选择器<br>CSS 伪元素用于设置元素指定部分的样式。<br>1.设置元素的首字母、首行的样式<br>2.在元素的内容之前或之后插入内容<br>…</p>
+<ul>
+<li>::first-line 伪元素<br>用于向文本的首行添加特殊样式。<br>只能应用于块级元素。</li>
+<li>::first-letter 伪元素<br>用于向文本的首字母添加特殊样式。<br>只能应用于块级元素。<br>伪元素可以与 CSS 类结合使用</li>
+<li>::before 伪元素<br>用于在元素内容之前插入一些内容。</li>
+<li>::after 伪元素<br>可用于在元素内容之后插入一些内容。</li>
+<li>::selection 伪元素<br>匹配用户选择的元素部分。</li>
+</ul>
+<p>###2.5 属性选择器<br>设置带有特定属性或属性值的 HTML 元素的样式。</p>
+<ul>
+<li>[attribute] 选择器<br>用于选取带有指定属性的元素。</li>
+<li>[attribute=”value”] 选择器<br>用于选取带有指定属性和值的元素。</li>
+<li>[attribute~=”value”] 选择器<br>选取属性值包含指定词的元素。</li>
+<li>[attribute|=”value”] 选择器<br>用于选取指定属性以指定值开头的元素。</li>
+<li>[attribute^=”value”] 选择器<br>用于选取指定属性以指定值开头的元素。</li>
+<li>[attribute$=”value”] 选择器<br>用于选取指定属性以指定值结尾的元素。</li>
+<li>[attribute*=”value”] 选择器<br>选取属性值包含指定词的元素。</li>
+</ul>
+<p>###2.6 选择器的权重<br>样式的冲突 不同的选择器选择相同的元素，为相同样式设置不同的值，应用哪个样式，由选择器的权重决定</p>
+<pre><code>    权重：
+        内联样式         1，0，0，0
+        id选择器         0，1，0，0
+        类和伪类选择器    0，0，1，0
+        元素选择器        0，0，0，1
+        通配选择器        0，0，0，0
+        继承的选择器       没有优先级
+    
+</code></pre>
+<p>比较优先级时：将所有选择器的优先级进行相加计算<br>分组选择器是单独计算的<br>选择器的累加不会超过其最大的数量级 类选择器再高也不会超过id选择器<br>如果优先级计算后相同，则优先使用靠下的样式</p>
+<h2 id="3-单位"><a href="#3-单位" class="headerlink" title="3.单位"></a>3.单位</h2><p>长度单位：</p>
+<ul>
+<li><p>像素<br>  屏幕由一个一个小点构成<br>  不同屏幕的像素大小是不同的，像素越小的屏幕显示的效果越清晰<br>  同样的200px在不同的设备下显示效果不同</p>
+</li>
+<li><p>百分比<br>  可以将属性值设置为相对于父元素属性的百分比<br>  可以使子元素跟随父元素的改变而改变</p>
+</li>
+<li><p>em<br>  是相对于元素的字体大小来计算的<br>  1em = 1font-size<br>  会根据字体大小的改变而改变</p>
+</li>
+<li><p>rem<br>  相对于根元素的字体大小来计算 html</p>
+</li>
+</ul>
+<h2 id="4-颜色"><a href="#4-颜色" class="headerlink" title="4.颜色"></a>4.颜色</h2><p>指定颜色是通过使用预定义的颜色名称，或RGB、HEX、HSL、RGBA、HSLA 值。</p>
+<p>###4.1 RGB颜色</p>
+<p>在 CSS 中，可以使用下面的公式将颜色指定为 RGB 值：rgb(red, green, blue)<br>每个参数 (red、green 以及 blue) 定义了0到255之间的颜色强度。<br>要显示黑色，请将所有颜色参数设置为 0，如下所示：rgb(0, 0, 0)。<br>要显示白色，请将所有颜色参数设置为 255，如下所示：rgb(255, 255, 255)。</p>
+<p>RGBA 值<br>RGBA 颜色值是具有alpha通道的RGB颜色值的扩展-它指定了颜色的不透明度。<br>RGBA 颜色值指定为：<br>rgba(red, green, blue, alpha)<br>alpha 参数是介于0.0（完全透明）和1.0（完全不透明）之间的数字</p>
+<p>###4.2 HEX颜色<br>在 CSS 中，可以使用以下格式的十六进制值指定颜色：<code>#rrggbb</code><br>其中 rr（红色）、gg（绿色）和bb（蓝色）是介于00和ff之间的十六进制值（与十进制 0-255 相同）。</p>
+
       
     </div>
 
