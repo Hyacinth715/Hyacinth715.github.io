@@ -23,19 +23,18 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
-<meta name="description" content="1.CSS简介CSS 指的是层叠样式表 (Cascading Style Sheets)CSS 描述了如何在屏幕、纸张或其他媒体上显示 HTML 元素  CSS 语法CSS 规则集（rule-set）由选择器和声明块组成：     三种使用 CSS 的方法  - 外部 CSS  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在 head 部分的">
+<meta name="description" content="1.CSS简介CSS 指的是层叠样式表 (Cascading Style Sheets)CSS 描述了如何在屏幕、纸张或其他媒体上显示 HTML 元素  CSS 语法CSS 规则集（rule-set）由选择器和声明块组成：     三种使用 CSS 的方法  - 外部 CSS  &amp;nbsp; &amp;nbsp; 在 head 部分的 link 元素内包含对外部样式表文件的引用  可以使用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS学习笔记">
 <meta property="og:url" content="http://example.com/2021/03/12/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="梦觉小庭院">
-<meta property="og:description" content="1.CSS简介CSS 指的是层叠样式表 (Cascading Style Sheets)CSS 描述了如何在屏幕、纸张或其他媒体上显示 HTML 元素  CSS 语法CSS 规则集（rule-set）由选择器和声明块组成：     三种使用 CSS 的方法  - 外部 CSS  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在 head 部分的">
+<meta property="og:description" content="1.CSS简介CSS 指的是层叠样式表 (Cascading Style Sheets)CSS 描述了如何在屏幕、纸张或其他媒体上显示 HTML 元素  CSS 语法CSS 规则集（rule-set）由选择器和声明块组成：     三种使用 CSS 的方法  - 外部 CSS  &amp;nbsp; &amp;nbsp; 在 head 部分的 link 元素内包含对外部样式表文件的引用  可以使用">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.w3school.com.cn/i/css/selector.gif">
 <meta property="article:published_time" content="2021-03-12T11:44:41.000Z">
-<meta property="article:modified_time" content="2021-03-14T07:29:48.377Z">
+<meta property="article:modified_time" content="2021-03-14T07:50:28.643Z">
 <meta property="article:author" content="Cheng yuren">
-<meta property="article:tag" content="前端">
-<meta property="article:tag" content="CSS">
+<meta property="article:tag" content="前端,CSS">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.w3school.com.cn/i/css/selector.gif">
 
@@ -162,7 +161,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-CSS%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">1.CSS简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%98%E5%85%88%E7%BA%A7%EF%BC%9A"><span class="nav-number">1.0.1.</span> <span class="nav-text">优先级：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%8D%95%E4%BD%8D"><span class="nav-number">2.</span> <span class="nav-text">3.单位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E9%A2%9C%E8%89%B2"><span class="nav-number">3.</span> <span class="nav-text">4.颜色</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-CSS%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">1.CSS简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%98%E5%85%88%E7%BA%A7%EF%BC%9A"><span class="nav-number">1.0.1.</span> <span class="nav-text">优先级：####</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-CSS%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.</span> <span class="nav-text">2.CSS选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E7%AE%80%E5%8D%95%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 简单选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E7%BB%84%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 组合选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 伪类选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 伪元素选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 属性选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E6%9D%83%E9%87%8D"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 选择器的权重</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%8D%95%E4%BD%8D"><span class="nav-number">3.</span> <span class="nav-text">3.单位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E9%A2%9C%E8%89%B2"><span class="nav-number">4.</span> <span class="nav-text">4.颜色</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-RGB%E9%A2%9C%E8%89%B2"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 RGB颜色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-HEX%E9%A2%9C%E8%89%B2"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 HEX颜色</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -191,7 +190,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">1</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -266,7 +265,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-03-14 15:29:48" itemprop="dateModified" datetime="2021-03-14T15:29:48+08:00">2021-03-14</time>
+        <time title="修改时间：2021-03-14 15:50:28" itemprop="dateModified" datetime="2021-03-14T15:50:28+08:00">2021-03-14</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -300,12 +299,12 @@
 
 <ul>
 <li><p>三种使用 CSS 的方法</p>
-<pre><code> - 外部 CSS  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在 head 部分的 link 元素内包含对外部样式表文件的引用
+<pre><code> - 外部 CSS  &amp;nbsp; &amp;nbsp; 在 head 部分的 link 元素内包含对外部样式表文件的引用
  可以使用到浏览器的缓存机制，从而加载浏览器的加载速度。
- - 内部 CSS  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;head 部分的 style 元素中进行定义
- - 行内 CSS  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在相关元素的 style 属性中定义
+ - 内部 CSS  &amp;nbsp; &amp;nbsp; head 部分的 style 元素中进行定义
+ - 行内 CSS  &amp;nbsp; &amp;nbsp; 在相关元素的 style 属性中定义
 </code></pre>
-<h4 id="优先级："><a href="#优先级：" class="headerlink" title="优先级："></a>优先级：</h4><p>  页面中的所有样式将按照以下规则“层叠”为新的“虚拟”样式表，其中第一优先级最高：</p>
+<h4 id="优先级："><a href="#优先级：" class="headerlink" title="优先级：####"></a>优先级：####</h4><p>  页面中的所有样式将按照以下规则“层叠”为新的“虚拟”样式表，其中第一优先级最高：</p>
 <ol>
 <li>行内样式（在 HTML 元素中）</li>
 <li>外部和内部样式表（在 head 部分）</li>
@@ -317,7 +316,7 @@
 <li><p>CSS 注释<br>  位于 <code>&lt;style&gt; </code>元素内的 CSS 注释，以 /* 开始，以 */ 结束</p>
 </li>
 </ul>
-<p>##2.CSS选择器<br>我们可以将 CSS 选择器分为五类：</p>
+<h2 id="2-CSS选择器"><a href="#2-CSS选择器" class="headerlink" title="2.CSS选择器"></a>2.CSS选择器</h2><p>我们可以将 CSS 选择器分为五类：</p>
 <ul>
 <li>简单选择器（根据名称、id、类来选取元素）</li>
 <li>组合器选择器（根据它们之间的特定关系来选取元素）</li>
@@ -325,8 +324,7 @@
 <li>伪元素选择器（选取元素的一部分并设置其样式）</li>
 <li>属性选择器（根据属性或属性值来选取元素）</li>
 </ul>
-<p>###2.1 简单选择器</p>
-<ul>
+<h3 id="2-1-简单选择器"><a href="#2-1-简单选择器" class="headerlink" title="2.1 简单选择器"></a>2.1 简单选择器</h3><ul>
 <li><p>元素选择器<br>元素选择器根据元素名称来选择 HTML 元素。</p>
 </li>
 <li><p>id 选择器<br>id 选择器使用 HTML 元素的 id 属性来选择特定元素。<br>元素的 id 在页面中是<strong>唯一</strong>的，要选择具有特定 id 的元素，请写一个井号（＃），后跟该元素的 id。</p>
@@ -340,8 +338,7 @@
 <li><p>交集选择器<br>用元素选择器开头  p.red</p>
 </li>
 </ul>
-<p>###2.2 组合选择器</p>
-<ul>
+<h3 id="2-2-组合选择器"><a href="#2-2-组合选择器" class="headerlink" title="2.2 组合选择器"></a>2.2 组合选择器</h3><ul>
 <li><p>后代选择器 (空格)<br>后代选择器匹配属于指定元素后代的所有元素。</p>
 </li>
 <li><p>子元素选择器 (&gt;)<br>子选择器匹配属于指定元素子元素的所有元素。</p>
@@ -351,7 +348,7 @@
 <li><p>通用兄弟选择器 (~)<br>通用兄弟选择器匹配属于指定元素的同级元素的所有元素。</p>
 </li>
 </ul>
-<p>###2.3 伪类选择器<br>伪类用于定义元素的特殊状态。</p>
+<h3 id="2-3-伪类选择器"><a href="#2-3-伪类选择器" class="headerlink" title="2.3 伪类选择器"></a>2.3 伪类选择器</h3><p>伪类用于定义元素的特殊状态。</p>
 <ul>
 <li>锚伪类 链接能够以不同的方式显示：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;* 未访问的链接 *&#x2F;</span><br><span class="line">a:link &#123;</span><br><span class="line">  color: #FF0000;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;* </span><br><span class="line">已访问的链接 </span><br><span class="line">由于隐私的原因 这个伪类只能修改颜色</span><br><span class="line">*&#x2F;</span><br><span class="line">a:visited &#123;</span><br><span class="line">  color: #00FF00;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;* 鼠标悬停链接 *&#x2F;</span><br><span class="line">a:hover &#123;</span><br><span class="line">  color: #FF00FF;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;* 已选择的链接 *&#x2F;</span><br><span class="line">a:active &#123;</span><br><span class="line">  color: #0000FF;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
@@ -372,7 +369,7 @@
 <li><p>:not() 否定伪类<br>除了</p>
 </li>
 </ul>
-<p>###2.4 伪元素选择器<br>CSS 伪元素用于设置元素指定部分的样式。<br>1.设置元素的首字母、首行的样式<br>2.在元素的内容之前或之后插入内容<br>…</p>
+<h3 id="2-4-伪元素选择器"><a href="#2-4-伪元素选择器" class="headerlink" title="2.4 伪元素选择器"></a>2.4 伪元素选择器</h3><p>CSS 伪元素用于设置元素指定部分的样式。<br>1.设置元素的首字母、首行的样式<br>2.在元素的内容之前或之后插入内容<br>…</p>
 <ul>
 <li>::first-line 伪元素<br>用于向文本的首行添加特殊样式。<br>只能应用于块级元素。</li>
 <li>::first-letter 伪元素<br>用于向文本的首字母添加特殊样式。<br>只能应用于块级元素。<br>伪元素可以与 CSS 类结合使用</li>
@@ -380,7 +377,7 @@
 <li>::after 伪元素<br>可用于在元素内容之后插入一些内容。</li>
 <li>::selection 伪元素<br>匹配用户选择的元素部分。</li>
 </ul>
-<p>###2.5 属性选择器<br>设置带有特定属性或属性值的 HTML 元素的样式。</p>
+<h3 id="2-5-属性选择器"><a href="#2-5-属性选择器" class="headerlink" title="2.5 属性选择器"></a>2.5 属性选择器</h3><p>设置带有特定属性或属性值的 HTML 元素的样式。</p>
 <ul>
 <li>[attribute] 选择器<br>用于选取带有指定属性的元素。</li>
 <li>[attribute=”value”] 选择器<br>用于选取带有指定属性和值的元素。</li>
@@ -390,7 +387,7 @@
 <li>[attribute$=”value”] 选择器<br>用于选取指定属性以指定值结尾的元素。</li>
 <li>[attribute*=”value”] 选择器<br>选取属性值包含指定词的元素。</li>
 </ul>
-<p>###2.6 选择器的权重<br>样式的冲突 不同的选择器选择相同的元素，为相同样式设置不同的值，应用哪个样式，由选择器的权重决定</p>
+<h3 id="2-6-选择器的权重"><a href="#2-6-选择器的权重" class="headerlink" title="2.6 选择器的权重"></a>2.6 选择器的权重</h3><p>样式的冲突 不同的选择器选择相同的元素，为相同样式设置不同的值，应用哪个样式，由选择器的权重决定</p>
 <pre><code>    权重：
         内联样式         1，0，0，0
         id选择器         0，1，0，0
@@ -413,10 +410,9 @@
 </li>
 </ul>
 <h2 id="4-颜色"><a href="#4-颜色" class="headerlink" title="4.颜色"></a>4.颜色</h2><p>指定颜色是通过使用预定义的颜色名称，或RGB、HEX、HSL、RGBA、HSLA 值。</p>
-<p>###4.1 RGB颜色</p>
-<p>在 CSS 中，可以使用下面的公式将颜色指定为 RGB 值：rgb(red, green, blue)<br>每个参数 (red、green 以及 blue) 定义了0到255之间的颜色强度。<br>要显示黑色，请将所有颜色参数设置为 0，如下所示：rgb(0, 0, 0)。<br>要显示白色，请将所有颜色参数设置为 255，如下所示：rgb(255, 255, 255)。</p>
+<h3 id="4-1-RGB颜色"><a href="#4-1-RGB颜色" class="headerlink" title="4.1 RGB颜色"></a>4.1 RGB颜色</h3><p>在 CSS 中，可以使用下面的公式将颜色指定为 RGB 值：rgb(red, green, blue)<br>每个参数 (red、green 以及 blue) 定义了0到255之间的颜色强度。<br>要显示黑色，请将所有颜色参数设置为 0，如下所示：rgb(0, 0, 0)。<br>要显示白色，请将所有颜色参数设置为 255，如下所示：rgb(255, 255, 255)。</p>
 <p>RGBA 值<br>RGBA 颜色值是具有alpha通道的RGB颜色值的扩展-它指定了颜色的不透明度。<br>RGBA 颜色值指定为：<br>rgba(red, green, blue, alpha)<br>alpha 参数是介于0.0（完全透明）和1.0（完全不透明）之间的数字</p>
-<p>###4.2 HEX颜色<br>在 CSS 中，可以使用以下格式的十六进制值指定颜色：<code>#rrggbb</code><br>其中 rr（红色）、gg（绿色）和bb（蓝色）是介于00和ff之间的十六进制值（与十进制 0-255 相同）。</p>
+<h3 id="4-2-HEX颜色"><a href="#4-2-HEX颜色" class="headerlink" title="4.2 HEX颜色"></a>4.2 HEX颜色</h3><p>在 CSS 中，可以使用以下格式的十六进制值指定颜色：<code>#rrggbb</code><br>其中 rr（红色）、gg（绿色）和bb（蓝色）是介于00和ff之间的十六进制值（与十进制 0-255 相同）。</p>
 
     </div>
 
@@ -426,8 +422,7 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"># 前端</a>
-              <a href="/tags/CSS/" rel="tag"># CSS</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF-CSS/" rel="tag"># 前端,CSS</a>
           </div>
 
         
